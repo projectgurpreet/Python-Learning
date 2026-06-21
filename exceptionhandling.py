@@ -32,3 +32,11 @@
 #quick quiz trying 
 a = input("Enter a number between 5 and 9: ")
 
+try:
+    if a == "quit": 
+        print("Mission Abort")
+except:
+    int(a)
+    try:
+        if 5<=int(a)<=9:
+            print(f"the integer was ")
