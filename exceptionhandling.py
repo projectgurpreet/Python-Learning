@@ -51,7 +51,11 @@
 #this thing is not working gotta ask claude for hints   
 #retry 
 
+class InvalidRangeError(Exception):
+    pass
+
 a = input("Enter a number between 5 and 9: ")
+
 if a == "quit": 
     print("Mission Abort")
 else:
@@ -60,7 +64,10 @@ else:
         if 5<=num_a<=9:
             print(f"program ran successfully and the given number was {num_a}")
         else:
-            print(f"program ran successfully, but the given number {num_a} was not in the desired range")
+            raise InvalidRangeError(f"program ran successfully, but the given number {num_a} was not in the desired range")
+            # print(f"program ran successfully, but the given number {num_a} was not in the desired range")
+    except InvalidRangeError as e:
+        print(e)
     except ValueError: #have the habit to call in the exact error
         print("an invalid input was given")
     except Exception as e:
