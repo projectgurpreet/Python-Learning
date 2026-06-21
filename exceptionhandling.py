@@ -46,3 +46,6 @@ except:
         print("a valid entry was not made.")
 finally:
     print("Cycle ended")
+
+
+#this thing is not working gotta ask claude for hints
