@@ -30,22 +30,42 @@
 
 #! relearning exception handling
 #quick quiz trying 
+# a = input("Enter a number between 5 and 9: ")
+
+# try:
+#     if a == "quit": 
+#         print("Mission Abort")
+# except:
+#     int(a)
+#     try:
+#         if 5<=int(a)<=9:
+#             print(f"the integer was {int(a)}")
+#         else:
+#             print(f"the integer was not between the asked range. your given integer was {int(a)}")
+#     except:
+#         print("a valid entry was not made.")
+# finally:
+#     print("Cycle ended")
+
+
+#this thing is not working gotta ask claude for hints   
+#retry 
+
 a = input("Enter a number between 5 and 9: ")
-
-try:
-    if a == "quit": 
-        print("Mission Abort")
-except:
-    int(a)
-    try:
-        if 5<=int(a)<=9:
-            print(f"the integer was {int(a)}")
+if a == "quit": 
+    print("Mission Abort")
+else:
+    try: 
+        num_a = int(a) #this can raise a valeuError
+        if 5<=num_a<=9:
+            print(f"program ran successfully and the given number was {num_a}")
         else:
-            print(f"the integer was not between the asked range. your given integer was {int(a)}")
-    except:
-        print("a valid entry was not made.")
-finally:
-    print("Cycle ended")
+            print(f"program ran successfully, but the given number {num_a} was not in the desired range")
+    except ValueError: #have the habit to call in the exact error
+        print("an invalid input was given")
+    except Exception as e:
+        print(f"unexpected error occured. error was {e}")
+    finally:
+        print("program end")
 
 
-#this thing is not working gotta ask claude for hints
