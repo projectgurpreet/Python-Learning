@@ -39,4 +39,10 @@ except:
     int(a)
     try:
         if 5<=int(a)<=9:
-            print(f"the integer was ")
+            print(f"the integer was {int(a)}")
+        else:
+            print(f"the integer was not between the asked range. your given integer was {int(a)}")
+    except:
+        print("a valid entry was not made.")
+finally:
+    print("Cycle ended")
