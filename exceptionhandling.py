@@ -29,5 +29,6 @@
 
 
 #! relearning exception handling
-
+#quick quiz trying 
+a = input("Enter a number between 5 and 9: ")
 
