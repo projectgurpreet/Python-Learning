@@ -32,8 +32,6 @@ import random
 
 class TaskError(Exception):
     pass
-class UnknownError(Exception):
-    pass
 
 alphabets = "abcdefghijklmnopqrstuvwxyz"
 
@@ -100,7 +98,5 @@ if task.title() == "Code":
 elif task.title() == "Decode":
     decoding_message = input("What do you want to decode from the secret language?: ").lower().strip()
     decoding(decoding_message)
-elif not task.title() == "Code" or not task.title() == "Decode":
-    raise TaskError("Invalid Task Was Assigned!\nAllowed Tasks: 'Code' or 'Decode'")
 else:
-    raise UnknownError("An Unknown Error Occured While Executing")
+    raise TaskError("Invalid Task Was Assigned!\nAllowed Tasks: 'Code' or 'Decode'")
