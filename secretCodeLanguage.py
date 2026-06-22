@@ -100,3 +100,7 @@ elif task.title() == "Decode":
     decoding(decoding_message)
 else:
     raise TaskError("Invalid Task Was Assigned!\nAllowed Tasks: 'Code' or 'Decode'")
+
+
+
+#! But it was working fine. The main issue was that when I watched the solution video, there was a pretty short and fascinating solution, but it depends on what clicked in my mind at that point. One thing is for sure: I'll try to replicate in that way too using my own mind and see how things work. 
